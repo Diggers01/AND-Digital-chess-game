@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="chess.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="checks.js"></script>
+    <script src="general.js"></script>
+</head>
+
+<body>
+    <table class="chess-board">
+        <tbody>
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+                <th>G</th>
+                <th>H</th>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td class="light" data-position="A8" data-piece=""></td>
+                <td class="dark" data-position="B8" data-piece=""></td>
+                <td class="light" data-position="C8" data-piece=""></td>
+                <td class="dark" data-position="D8" data-piece=""></td>
+                <td class="light" data-position="E8" data-piece=""></td>
+                <td class="dark" data-position="F8" data-piece=""></td>
+                <td class="light" data-position="G8" data-piece=""></td>
+                <td class="dark" data-position="H8" data-piece=""></td>
+                <th class="piece" data-pieceinfo="black-king">♚</th>
+                <th class="piece" data-pieceinfo="white-king">♔</th>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="dark" data-position="A7" data-piece=""></td>
+                <td class="light" data-position="B7" data-piece=""></td>
+                <td class="dark" data-position="C7" data-piece=""></td>
+                <td class="light" data-position="D7" data-piece=""></td>
+                <td class="dark" data-position="E7" data-piece=""></td>
+                <td class="light" data-position="F7" data-piece=""></td>
+                <td class="dark" data-position="G7" data-piece=""></td>
+                <td class="light" data-position="H7" data-piece=""></td>
+                <th class="piece" data-pieceinfo="black-queen">♛</th>
+                <th class="piece" data-pieceinfo="white-queen">♕</th>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="light" data-position="A6" data-piece=""></td>
+                <td class="dark" data-position="B6" data-piece=""></td>
+                <td class="light" data-position="C6" data-piece=""></td>
+                <td class="dark" data-position="D6" data-piece=""></td>
+                <td class="light" data-position="E6" data-piece=""></td>
+                <td class="dark" data-position="F6" data-piece=""></td>
+                <td class="light" data-position="G6" data-piece=""></td>
+                <td class="dark" data-position="H6" data-piece=""></td>
+                <th class="piece" data-pieceinfo="black-bishop">♝</th>
+                <th class="piece" data-pieceinfo="white-bishop">♗</th>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="dark" data-position="A5" data-piece=""></td>
+                <td class="light" data-position="B5" data-piece=""></td>
+                <td class="dark" data-position="C5" data-piece=""></td>
+                <td class="light" data-position="D5" data-piece=""></td>
+                <td class="dark" data-position="E5" data-piece=""></td>
+                <td class="light" data-position="F5" data-piece=""></td>
+                <td class="dark" data-position="G5" data-piece=""></td>
+                <td class="light" data-position="H5" data-piece=""></td>
+                <th class="piece" data-pieceinfo="black-knight">♞</th>
+                <th class="piece" data-pieceinfo="white-knight">♘</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="light" data-position="A4" data-piece=""></td>
+                <td class="dark" data-position="B4" data-piece=""></td>
+                <td class="light" data-position="C4" data-piece=""></td>
+                <td class="dark" data-position="D4" data-piece=""></td>
+                <td class="light" data-position="E4" data-piece=""></td>
+                <td class="dark" data-position="F4" data-piece=""></td>
+                <td class="light" data-position="G4" data-piece=""></td>
+                <td class="dark" data-position="H4" data-piece=""></td>
+                <th class="piece" data-pieceinfo="black-rook">♜</th>
+                <th class="piece" data-pieceinfo="white-rook">♖</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="dark" data-position="A3" data-piece=""></td>
+                <td class="light" data-position="B3" data-piece=""></td>
+                <td class="dark" data-position="C3" data-piece=""></td>
+                <td class="light" data-position="D3" data-piece=""></td>
+                <td class="dark" data-position="E3" data-piece=""></td>
+                <td class="light" data-position="F3" data-piece=""></td>
+                <td class="dark" data-position="G3" data-piece=""></td>
+                <td class="light" data-position="H3" data-piece=""></td>
+                <th class="piece" data-pieceinfo="black-pawn">♟</th>
+                <th class="piece" data-pieceinfo="white-pawn">♙</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="light" data-position="A2" data-piece=""></td>
+                <td class="dark" data-position="B2" data-piece=""></td>
+                <td class="light" data-position="C2" data-piece=""></td>
+                <td class="dark" data-position="D2" data-piece=""></td>
+                <td class="light" data-position="E2" data-piece=""></td>
+                <td class="dark" data-position="F2" data-piece=""></td>
+                <td class="light" data-position="G2" data-piece=""></td>
+                <td class="dark" data-position="H2" data-piece=""></td>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td class="dark" data-position="A1"></td>
+                <td class="light" data-position="B1"></td>
+                <td class="dark" data-position="C1"></td>
+                <td class="light" data-position="D1"></td>
+                <td class="dark" data-position="E1"></td>
+                <td class="light" data-position="F1"></td>
+                <td class="dark" data-position="G1"></td>
+                <td class="light" data-position="H1"></td>
+                <th></th>
+                <th></th>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button data-type="start">Click here to select start point</button>
+        <button data-type="destination">Click here to select destination</button>
+        <button data-type="pieceSelection">Select Piece</button>
+        <button data-type="run">Run simulation</button>
+        <button data-type="reset">Reset</button>
+    </div>
+</body>
+
+</html>

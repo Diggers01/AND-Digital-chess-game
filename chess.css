@@ -1,0 +1,86 @@
+.chess-board {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.chess-board th {
+    padding: .5em;
+}
+
+.chess-board th.piece {
+    border: none;
+    font-size: 32px;
+    font-weight: normal;
+    padding: 0 0.5em;
+    cursor: pointer;
+}
+
+.chess-board th+th {
+    border-bottom: 1px solid #000;
+}
+
+.chess-board th:first-child {
+    border-right: 1px solid #000;
+}
+
+.chess-board td:nth-last-child(3) {
+    border-right: 1px solid #000;
+}
+
+.chess-board tr:last-child td {
+    border-bottom: 1px solid;
+}
+
+.chess-board th:empty {
+    border: none;
+}
+
+.chess-board td {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    font-size: 32px;
+    line-height: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+.chess-board .light {
+    background: #eee;
+}
+
+.chess-board .light:hover {
+    background: #ddd;
+}
+
+.chess-board .dark {
+    background: #aaa;
+}
+
+.chess-board .dark:hover {
+    background: #bbb;
+}
+
+.start {
+    box-shadow: 0px 0px 0px 5px red inset;
+    position: relative;
+}
+
+.destination {
+    box-shadow: 0px 0px 0px 5px green inset;
+}
+
+.piece-box {
+    box-shadow: 0px 0px 0px 5px blue inset;
+}
+
+span {
+    position: absolute;
+    left: 0.5rem;
+    transform: translateX(-50%);
+    transition: all 1s ease;
+    top: 1.5rem;
+    height: 0;
+    width: 0;
+}
